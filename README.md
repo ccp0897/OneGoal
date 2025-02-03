@@ -19,3 +19,6 @@
   7. Profile Page: Página de perfil de usuario donde aparece la información del usuario, se puede acceder a las conversaciones que tenga el usuario creadas (cada apuesta puede tener su propio chat), el monto de dinero del que dispone, una parte para editar el perfil y un historial de apuesta, donde aparece si ha ganado o perdido con el dinero en rojo (perdido) o verde(ganado).
   8. Create Bet: Pop Up donde el usuario podrá crear una apuesta, seleccionando el partido (que no haya comenzado aun), si quiere que sea global o solo entre amigos, el monto de dinero a apostar y un apartado para añadir a amigos (los cuales deberían poder rechazar la peticion). Yo considero que se podrá añadir a amigos incluso a una apuesta global.
 
+
+
+AAAAAAA
