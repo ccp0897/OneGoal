@@ -29,128 +29,109 @@
 /* Global Styles */
 body {
     width: 99vw;
+    background-color: var(--blanco);
 }
 
 /*Header*/
 .header{
-    background-color: var(--blanco);
     color: var(--secundario);
-    border: solid;
-}
-
-.header__logo{
-    width: 25%;
-    height: 80;
-    background-image: url("../img/iconos/logo.svg");
-    background-size: cover;
-    background-position: center;
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header */
-.header {
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+
 }
 
-.header__nav {
+.header__logo{
+    width: 20%;
+}
+
+.header__logo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*Navegacion*/
+.header__nav{
     display: flex;
-    gap: 1rem;
+    gap: 2.5vw;
 }
 
-.header__nav-link {
+.header__nav a{
+    text-decoration: none;
+    color: var(--secundario);
+    font-size: 1.5rem;
+    position: relative;
+}
+.header__nav a:hover, .header__nav a.active {
+    color: var(--principal);
+}
+.header__nav a:hover::after, .header__nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1vh; /* Adjust spacing from text */
+    height: 0.5vh;
+    background-color: var(--principal);
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+
+.buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 45%;
+}
+
+.button__login {
+    background-color: var(--principal);
+    border: 2px solid var(--principal);
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.button__singup {
+    border: 2px solid var(--principal);
+    color: var(--principal);
+    background-color: transparent;
+}
+.button__login:hover {
+    background-color: var(--secundario);
+    color: var(--principal);
+}   
+.button__singup:hover {
+    background-color: var(--principal);
     color: var(--secundario);
 }
-
-/* Main Section */
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
-
-.main__hero {
-    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+.separador{
     width: 100%;
-    height: 300px;
+    height: 2vh;
+    width: 100%;
+    background: linear-gradient(180deg, var(--principal) 10%, var(--blanco) 100%);
+}
+
+/*Main de la pagina*/
+
+.main{
+    background-image: url("../img/background-modified-ex.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    margin-top: 3vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-    margin-bottom: 2rem;
 }
 
-.main__hero-text {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
 
-.main__hero-button {
-    background-color: #c3ff00;
-    color: #000;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
 
-.main__about {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.main__about-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.main__about-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.main__about-card {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.main__about-card-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Footer */
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer__links {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer__text {
-    font-size: 0.875rem;
-}
