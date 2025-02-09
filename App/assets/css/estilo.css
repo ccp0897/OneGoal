@@ -62,7 +62,7 @@ body {
 .header__nav a{
     text-decoration: none;
     color: var(--secundario);
-    font-size: 1.5rem;
+    font-size: 1.5em;
     position: relative;
 }
 .header__nav a:hover, .header__nav a.active {
@@ -127,11 +127,243 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     width: 100%;
     margin-top: 3vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+/*Portada*/
+.main__portada{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-image: url("../img/BellinghamVerdoso.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5vh;
+    
+}
 
+.main__portada-titulo{
+    width: 45%;
+    color:var(--secundario);
+    font-size: 2.5em;
+    text-align: center;
+    /* border: solid; */
+    font-weight: bold;
+    position: relative;
+}
 
+.box_titulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 10vh;
+    background-color: var(--principal);
+    z-index: 1 ;
+}
+
+.main__portada-titulo h2{
+    position: relative;
+    z-index: 2;
+}
+
+.main__portada-button{
+    width: 30%;
+    height: 100%;
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.main__portada-button a{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--principal);
+    color: var(--secundario);
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center ;
+    border-radius: 0.5rem;
+    border: 2px solid var(--principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+.main__portada-button a:hover{
+    background-color: var(--secundario);
+    color: var(--principal);
+}
+
+/* MARCA/INFORMACION */
+
+.main__marca{
+    width: 90%;
+    background-color: var(--principal);
+    padding: 0.5rem 1rem;
+    /* border: solid; */
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    margin-bottom: 5vh;
+}
+
+.main__marca .white{
+    color: var(--blanco);
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white, -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white;
+}
+.main__marca .bold{
+    font-weight: bold;
+    text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+}
+
+.separador__basico{
+    width: 80%;
+    height: 4px;
+    background-color: var(--secundario);
+    margin-bottom: 5vh;
+}
+
+/* SECCIONES ABOUT US */
+
+.main__aboutUs{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.main__aboutUs-titulo{
+    width: 45%;
+    color:var(--secundario);
+    font-size: 2.5em;
+    /* border: solid; */
+    font-weight: bold;
+    position: relative;
+    padding-left: 0.5rem;
+}
+.main__aboutUs-titulo h2{
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+}
+.main__aboutUs-titulo .box_titulo{
+    width: 30%;
+}
+
+/* GRID */
+
+.main__aboutUs-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
+    gap: 4vw;
+    margin-top: 2vh;
+    /* border: solid; */
+}
+
+.container__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--principal);
+    border-radius: 8px;
+    background-color: var(--blanco);
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 4px 4px var(--gris);
+}
+
+.container__box h3{
+    font-size: 2em;
+    color: var(--secundario);
+    font-weight: bold;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+}
+
+.container__box p{
+    font-size: 1.5em;
+    color: var(--gris);
+    padding: 0 1rem;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    color: var(--blanco);
+}
+
+.footer__info{
+    width: 100%;
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid; */
+}
+.footer__info h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: var(--principal);
+}
+.footer__info-logo{
+    width: 40%;
+    /* border: solid white; */
+}
+.footer__info-logo img{
+    margin-bottom: 2vh;
+}
+
+.footer__info-contact{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid white; */
+
+}
+.footer__info-contact div{
+    width: 40%;
+    display: flex;
+    /* border: solid white; */
+    gap: 0.5vw;
+
+}
+.footer__info-follow{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid white; */
+}
+
+.footer__svg{
+    height: 24px;
+    width: 24px;
+    fill: var(--blanco);
+}
+.follow_icons .footer__svg:hover{
+    fill: var(--principal);
+    scale: 1.2;
+}
+
+.footer__copy{
+    width: 100%;
+    font-size: 0.5em;
+    /* border: solid var(--blanco); */
+    text-align: right;
+    
+}
