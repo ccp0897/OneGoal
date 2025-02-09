@@ -1,4 +1,4 @@
-# <span style="color:rgb(167, 244, 7)">OneGoal</span>
+# <span style="color=green">OneGoal</span>
 - V0 - Sistema de diseño e implementación en HTML y CSS
 ## Enlaces importantes
 - Enlace a figma para el diseño de la aplicacion web, junto con sistema de diseño: https://www.figma.com/design/uwO6btN1cfY0TrMC2dDUSA/OneFootball?node-id=0-1&t=iNzVuaJa2WYd7azF-1
