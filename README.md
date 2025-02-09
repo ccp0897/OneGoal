@@ -31,6 +31,7 @@
 ## 2. Implementación HTML y CSS
 
 Para la implementación del sistema de diseño se han empleado las tecnologías de HTML y CSS. Las decisiones que he tomado a la hora de crear las diferentes páginas son:
+- Creación de diferentes páginas html y sus respectivos estilos en archivos diferentes para una mejor organización y reducción de lineas de codigo.
 - Creción de una página principal para cuando no se ha iniciado sesión, y ya el resto va como si el usuario ya hubiera iniciado sesión.
 - El flujo de uso de las diferentes paginas:
     - Partiendo desde el Landig Page, todo enlace que se pulse te llevara a la página de registro, puesto que no se podría hacer nada si no se esta registrado y se haya iniciado sesión.
