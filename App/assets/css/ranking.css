@@ -7,6 +7,7 @@
     font-family: SinkinSansBold;
     src: url("../fonts/SinkinSans-600SemiBold.otf"), url("../fonts/SinkinSans-600SemiBoldItalic.otf"), url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
 }
+
 @font-face{
     font-family: SinkinSansExtraBold;
     src: url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
@@ -25,13 +26,17 @@
 }
 
 :root{
-    --principal: #A7F407;
+    --principal: rgb(167, 244, 7);
     --secundario: #000000;
     --blanco: #FFFFFF;
-    --gris: #908E8E;
+    --gris: rgb(144, 142, 142);
     --terciario: #7E8B62;
     --rojo: #7E0505;
     --ganador: #147C06;
+    --bold: SinkinSansBold;
+    --extraBold: SinkinSansExtraBold;
+    --grisOpaco: rgba(144, 142, 142, 0.1);
+    --uncomplete:rgba(167, 244, 7, 0.4);
 }
 
 
@@ -69,16 +74,16 @@ body {
     gap: 2.5vw;
 }
 
-.header__nav a{
+.header__nav .header__nav-a{
     text-decoration: none;
     color: var(--secundario);
     font-size: 1.5em;
     position: relative;
 }
-.header__nav a:hover, .header__nav a.active {
+.header__nav .header__nav-a:hover, .header__nav .header__nav-a.active {
     color: var(--principal);
 }
-.header__nav a:hover::after, .header__nav a.active::after {
+.header__nav .header__nav-a:hover::after, .header__nav .header__nav-a.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -87,6 +92,13 @@ body {
     height: 0.5vh;
     background-color: var(--principal);
 }
+.marcado{
+    text-decoration: none;
+    color: var(--principal);
+    font-size: 1.5em;
+    font-family: SinkinSansBold;
+}
+
 .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -102,7 +114,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
     width: 45%;
     text-align: center;
-    font-family: SinkinSansBold;
     
 }
 
@@ -172,182 +183,207 @@ body {
     background: linear-gradient(180deg, var(--principal) 10%, var(--blanco) 100%);
 }
 
-/*Main de la pagina*/
+/*MAIN DE LA PAGINA*/
 
 .main{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 2rem 3rem;
+    /* border: solid; */
     background-image: url("../img/background-modified-ex.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    width: 100%;
-    margin-top: 3vh;
+}
+
+/*Contenedores que almacenan cada uno de los diferentes secciones de rankings*/
+.main__friends, .main__global{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-/*Portada*/
-.main__portada{
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    background-image: url("../img/BellinghamVerdoso.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 5vh;
-    
-}
-
-.main__portada-titulo{
-    width: 45%;
-    color:var(--secundario);
-    font-size: 2.2em;
-    text-align: center;
+    align-items: start;
+    width: 100%;
+    padding: 1rem 3rem;
     /* border: solid; */
-    
+}
+
+.main__global{
+    margin-bottom: 2vh;
+}
+/*Dar formato a los titulos*/
+.main__titles{
+    color:var(--secundario);
+    /* border: solid; */
+    height: auto;
     position: relative;
+    margin-bottom: 2vh;
+}
+
+.main__friends h2, .main__global h2{
+    font-size: 2em;
+    font-family: var(--extraBold);
+    position: relative;
+    z-index: 2;
+    text-align: left;
+
 }
 
 .box_titulo{
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 10vh;
+    width: 30%;
+    height: 100%;
+    background-color: var(--principal);
+    z-index: 1 ;
+    
+}
+.box_titulo_derecha{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
     background-color: var(--principal);
     z-index: 1 ;
 }
 
-.main__portada-titulo h2{
-    position: relative;
-    z-index: 2;
-    font-family: SinkinSansExtraBold;
-}
-
-.main__portada-button{
-    width: 30%;
-    height: 100%;
-    /* border: solid; */
+/*Contenedor de los rankings*/
+.rankingsContainer{
     display: flex;
-    justify-content: center;
-    align-items: end;
+    flex-direction: column;
+    gap: 1vh;
+    width: 100%;
+    padding: 1rem 2rem;
+    /* border: solid; */
+    background-color: var(--grisOpaco);
+    border-radius: 12px;
 }
 
-.main__portada-button a{
+/*Cada uno de los rankings*/
+.container__ranking{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+}
+
+.leader{
+    background-color: var(--principal);
+}
+.other{
+    background-color: var(--uncomplete);
+}
+
+.ranking__info, .ranking__info2{
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+    /* border: solid; */
+}
+.ranking__info p{
+    font-size: 1.5em;
+    font-family: var(--bold);
+    color: var(--secundario);
+
+}
+
+.corona{
+    width: 44px;
+    height: 44px;
+    fill: #BFA619;
+}
+.info__img{
+    width: 44px;
+    height: 44px;
+}
+
+.ranking__points{
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    /* border: solid; */
+}
+
+
+.ranking__points p{
+    font-size: 1.5em;
+    font-family: var(--bold);
+}
+.gris{
+    color: var(--gris);
+}
+
+.ranking__svg{
+    height: 28px;
+    width: 28px;
+    fill: var(--gris);
+    vertical-align: middle;
+}
+
+.ranking__loadMore{
+    width: 100%;
+    text-align: right;
+}
+
+.ranking__loadMore a{
+    color: var(--secundario);
+    font-size: 0.8em;
+    font-family: var(--bold);
+}
+
+.ranking__loadMore a:hover{
+    text-decoration: underline;
+}
+
+.ranking__info2 p{
+    font-size: 1.5em;
+    font-family: var(--bold);
+    color: var(--principal);
+
+}
+.leaderGlobal{
+    background-color: var(--secundario);
+    color: var(--principal);
+    border: 2px solid var(--principal);
+}
+
+.otherGlobal{
+    background-color: var(--blanco);
+    color: var(--secundario);
+    border: 2px solid var(--principal);
+}
+
+/*Información que se aparecera en la pagina de rankings para ver que hay visitantes*/
+
+.main__info{
     width: 100%;
     padding: 1rem;
     background-color: var(--principal);
+    display: flex;
+    justify-content: center;
+}
+
+.main__info p{
+    width: 95%;
     color: var(--secundario);
-    font-family: SinkinSansExtraBold;
     font-size: 2em;
-    text-align: center ;
-    border-radius: 0.5rem;
-    border: 2px solid var(--principal);
-    transition: background-color 0.3s, color 0.3s;
-}
-.main__portada-button a:hover{
-    background-color: var(--secundario);
-    color: var(--principal);
-}
-
-/* MARCA/INFORMACION */
-
-.main__marca{
-    width: 90%;
-    background-color: var(--principal);
-    padding: 0.5rem 1rem;
-    /* border: solid; */
-    font-size: 3rem;
+    font-family: var(--bold);
     text-align: center;
-    border-radius: 0.2rem;
-    margin-bottom: 5vh;
+    /* border: solid; */
 }
 
-.main__marca .white{
+.bold{
+    font-family: var(--extraBold);
+}
+.white{
     color: var(--blanco);
-    font-weight: bold;
-    font-family: SinkinSansExtraBold;
-}
-.main__marca .bold{
-    font-weight: bold;
-    font-family: SinkinSansExtraBold;
-}
-
-.separador__basico{
-    width: 80%;
-    height: 4px;
-    background-color: var(--secundario);
-    margin-bottom: 5vh;
-}
-
-/* SECCIONES ABOUT US */
-
-.main__aboutUs{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5vh;
-}
-
-.main__aboutUs-titulo{
-    width: 45%;
-    color:var(--secundario);
-    font-size: 2em;
-    /* border: solid; */
-    font-weight: bold;
-    position: relative;
-    padding-left: 0.5rem;
-}
-.main__aboutUs-titulo h2{
-    position: relative;
-    z-index: 2;
-    font-family: SinkinSansExtraBold;
-}
-.main__aboutUs-titulo .box_titulo{
-    width: 30%;
-    height: 100%;
-}
-
-/* GRID */
-
-.main__aboutUs-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
-    gap: 4vw;
-    margin-top: 2vh;
-    /* border: solid; */
-}
-
-.container__box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--principal);
-    border-radius: 8px;
-    background-color: var(--blanco);
-    height: 350px;
-    text-align: center;
-    box-shadow: 0 4px 4px var(--gris);
-}
-
-.container__box h3{
-    font-size: 2em;
-    color: var(--secundario);
-    font-weight: bold;
-    margin: 1rem 0;
-    font-family: SinkinSansExtraBold;
-}
-
-.container__box p{
-    font-size: 1.5em;
-    color: var(--gris);
-    padding: 0 1rem;
+    font-family: var(--extraBold);
 }
 
 /*FOOTER*/

@@ -1,0 +1,577 @@
+@font-face{
+    font-family: SinkinSans;
+    src: url("../fonts/SinkinSans-200XLight.otf"), url("../fonts/SinkinSans-200XLightItalic.otf"), url("../fonts/SinkinSans-400Regular.otf"), url("../fonts/SinkinSans-400RegularItalic.otf"), url("../fonts/SinkinSans-600SemiBold.otf"), url("../fonts/SinkinSans-600SemiBoldItalic.otf"), url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
+}
+
+@font-face{
+    font-family: SinkinSansBold;
+    src: url("../fonts/SinkinSans-600SemiBold.otf"), url("../fonts/SinkinSans-600SemiBoldItalic.otf"), url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
+}
+
+@font-face{
+    font-family: SinkinSansExtraBold;
+    src: url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SinkinSans;
+    border: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --principal: rgb(167, 244, 7);
+    --secundario: #000000;
+    --blanco: #FFFFFF;
+    --gris: rgb(144, 142, 142);
+    --terciario: #7E8B62;
+    --rojo: #7E0505;
+    --ganador: #147C06;
+    --bold: SinkinSansBold;
+    --extraBold: SinkinSansExtraBold;
+    --grisOpaco: rgba(144, 142, 142, 0.3);
+    --uncomplete:rgba(167, 244, 7, 0.4);
+}
+
+
+/* Global Styles */
+body {
+    width: 99vw;
+    background-color: var(--blanco);
+    margin: 0  auto;
+}
+
+/*Header*/
+.header{
+    color: var(--secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+
+}
+
+.header__logo{
+    width: 20%;
+}
+
+.header__logo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*Navegacion*/
+.header__nav{
+    display: flex;
+    gap: 2.5vw;
+}
+
+.header__nav .header__nav-a{
+    text-decoration: none;
+    color: var(--secundario);
+    font-size: 1.5em;
+    position: relative;
+}
+.header__nav .header__nav-a:hover, .header__nav .header__nav-a.active {
+    color: var(--principal);
+}
+.header__nav .header__nav-a:hover::after, .header__nav .header__nav-a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1vh; /* Adjust spacing from text */
+    height: 0.5vh;
+    background-color: var(--principal);
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+
+.buttons a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 45%;
+    text-align: center;
+    
+}
+
+.button__login {
+    background-color: var(--principal);
+    border: 2px solid var(--principal);
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.button__singup {
+    border: 2px solid var(--principal);
+    color: var(--principal);
+    background-color: transparent;
+}
+.button__login:hover {
+    background-color: var(--secundario);
+    color: var(--principal);
+}   
+.button__singup:hover {
+    background-color: var(--principal);
+    color: var(--secundario);
+}
+
+/* YA INICIADO SESION */
+.header__user{
+    display: flex;
+    gap: 0.8vw;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    /* border: solid; */
+}
+.header__user-money{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--principal);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+}
+
+.header__svg{
+    height: 50px;
+    width: 50px;
+    fill: var(--secundario);
+}
+.header__svg:hover{
+    fill: var(--principal);
+    scale: 1.2;
+}
+.header__svg2{
+    height: 24px;
+    width: 24px;
+    fill: var(--principal);
+    cursor: pointer;
+}
+
+.header__svg2:hover{
+    fill: var(--secundario);
+    scale: 1.2;
+}
+.separador{
+    width: 100%;
+    height: 2vh;
+    width: 100%;
+    background: linear-gradient(180deg, var(--principal) 10%, var(--blanco) 100%);
+}
+.marcado{
+    fill: var(--principal);
+    height: 50px;
+    width: 50px;
+}
+
+/*MAIN DE LA PAGINA*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+    /* border: solid; */
+    background-image: url("../img/background-modified-ex.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.main__header{
+    width: 90%;
+    /* border: solid; */
+    background-image: url("../img/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+}
+
+.main__data{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__data-user img{
+    height: 300px;
+    width: 300px;
+    margin-top: -50%;
+}
+.main__data-username{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__data-username h3{
+    font-size: 2em;
+    font-family: var(--bold);
+    color: var(--secundario);
+}
+.main__data-username p{
+    font-size: 0.8em;
+    font-family: var(--bold);
+    color: var(--gris);
+    padding-top: 0.5rem;
+}
+.main__svg{
+    height: 50px;
+    width: 50px;
+    fill: var(--secundario);
+    vertical-align: middle;
+}
+.main__svg:hover{
+    fill: var(--principal);
+    scale: 1.2;
+    vertical-align: middle;
+}
+
+.main__data-money{
+    border: 2px solid var(--principal);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__data-money p{
+    font-size: 1.5em;
+    font-family: var(--bold);
+    color: var(--secundario);
+    padding: 0.5rem 2rem;
+}
+
+.main__svg2{
+    height: 28px;
+    width: 28px;
+    fill: var(--secundario);
+    cursor: pointer;
+    vertical-align: middle;
+}
+.main__svg2:hover{
+    fill: var(--principal);
+    scale: 1.2;
+}
+
+.main__data-edit{
+    /* border: solid; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__data-edit button{
+    width: 100%;
+    background-color: var(--principal);
+    font-size: 1.5em;
+    font-family: var(--bold);
+    border-radius: 8px;
+    padding: 1rem 0;
+}
+
+.main__data-edit button:hover{
+    background-color: var(--secundario);
+    color: var(--principal);
+    border: 1px solid var(--principal);
+    cursor: pointer;
+} 
+
+.separador2{
+    height: 4px;
+    width: 70%;
+    margin-top: 2vh;
+    background-color: var(--grisOpaco);
+}
+
+/* Parte de informacion personal del usuario*/
+.main__personalInfo{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 2vh 0;
+    /* border: solid; */
+}
+.main__titles{
+    color:var(--secundario);
+    display: flex;
+    flex-direction: column;
+    /* border: solid; */
+    height: auto;
+    position: relative;
+    margin-bottom: 2vh;
+}
+
+.main__titles h2{
+    width: auto;
+    font-family: var(--bold);
+    /* border: solid; */
+    position: relative;
+    z-index: 2;
+
+}
+
+.box_titulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(--principal);
+    z-index: 1 ;    
+}
+
+.main__userInfo{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 2px solid var(--principal);
+    border-radius: 12px;
+    background-color: var(--blanco);
+}
+
+.main__userInfo-name, .main__userInfo-email, .main__userInfo-phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+.main__userInfo-name h3, .main__userInfo-email h3, .main__userInfo-phone h3{
+    font-size: 1.2em;
+    font-family: var(--extraBold);
+    color: var(--secundario);
+}
+
+.main__userInfo-name p, .main__userInfo-email p, .main__userInfo-phone p{
+    font-size: 1em;
+    font-family: var(--bold);
+    color: var(--gris);
+}
+
+/* Seccion del historial de apuestas*/
+.main__history{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 2vh 0;
+    /* border: solid; */
+}
+.box_titulo_derecha{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(--principal);
+    z-index: 1 ;    
+}
+
+/* GRID CON LAS APUESTAS*/
+
+.main__history-games{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vh;
+    width: 90%;
+    /* border: solid; */
+    margin: 0 auto;
+}
+.main__history-game{
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid var(--principal);
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main__history-game:hover{
+    background-color: var(--principal);
+}
+
+/* Cada una de las apuestas*/
+
+.game__teams{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5vh;
+    color: var(--secundario);
+    /* border: solid; */
+}
+
+
+.result{
+    text-align: center;
+}
+
+.result p:first-child{
+    font-size: 0.6em;
+    font-family: var(--bold);
+    color: var(--gris);
+}
+
+.result p:last-child{
+    font-size: 1.2em;
+    font-family: var(--bold);
+    color: var(--secundario);
+}
+
+.game__teams-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* border: solid; */
+    text-align: center;
+    margin-top: -1vh;
+
+}
+
+.teamA__name p:first-child, .teamB__name p:first-child{
+    font-size: 0.6em;
+    font-family: var(--bold);
+    color: var(--gris);
+}
+
+.teamA__name p:last-child, .teamB__name p:last-child{
+    font-size: 0.7em;
+    font-family: var(--bold);
+    color: var(--secundario);
+}
+
+.game__results{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    padding: 0 1rem;
+    /* border: solid; */
+}
+
+.game__results-money p{
+    font-size: 1.2em;
+    font-family: var(--bold);
+    color: var(--rojo);
+}
+
+.main__history-loadMore{
+    width: 90%;
+    text-align: left;
+    margin: 2vh auto;
+}
+
+.main__history-loadMore a{
+    color: var(--secundario);
+    font-size: 0.8em;
+    font-family: var(--bold);
+}
+
+.main__history-loadMore a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    color: var(--blanco);
+}
+
+.footer__info{
+    width: 100%;
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid; */
+}
+.footer__info h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: var(--principal);
+}
+.footer__info-logo{
+    width: 40%;
+    /* border: solid white; */
+}
+.footer__info-logo img{
+    margin-bottom: 2vh;
+}
+
+.footer__info-contact{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid white; */
+
+}
+.footer__info-contact div{
+    width: 40%;
+    display: flex;
+    /* border: solid white; */
+    gap: 0.5vw;
+
+}
+.footer__info-follow{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid white; */
+}
+
+.footer__svg{
+    height: 24px;
+    width: 24px;
+    fill: var(--blanco);
+}
+.follow_icons .footer__svg:hover{
+    fill: var(--principal);
+    scale: 1.2;
+}
+
+.footer__copy{
+    width: 100%;
+    font-size: 0.5em;
+    /* border: solid var(--blanco); */
+    text-align: right;
+    
+}
