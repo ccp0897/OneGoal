@@ -48,6 +48,7 @@ body {
     background-attachment: fixed;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* MAIN */
@@ -59,12 +60,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 75vh;
+    justify-content: center;
+    height: auto;
     width: 40vw;
     margin-top: 12vh;
     box-shadow: 0 4px 4px var(--gris);
     background-color: var(--secundario);
     border-radius: 8px;
+    padding: 2vw 0;
 }
 
 .signup h1{
@@ -670,4 +673,40 @@ body {
     to {
       transform: translateX(-100%);
     }
+  }
+
+  @media(max-width:1366px){
+    .signup {
+      width: 50vw;
+    }
+  }
+  @media(max-width:1209px){
+    .signup {
+      width: 50vw;
+    }
+  }
+  @media(max-width:1150px){
+    .signup {
+      width: 55vw;
+    }
+  }
+  @media(max-width:968px){
+    .signup {
+      width: 65vw;
+    }
+  }
+  @media(max-width:801px){
+    .signup {
+      width: 75vw;
+    }
+  }
+  @media(max-width:700px){
+    .signup {
+      width: 85vw;
+      
+    }
+    .signup__form-button a{
+      font-size: 0.8rem;
+     
+  }
   }

@@ -37,6 +37,8 @@
     --extraBold: SinkinSansExtraBold;
     --grisOpaco: rgba(144, 142, 142, 0.3);
     --uncomplete:rgba(167, 244, 7, 0.4);
+    --tamanioCard: 275px;
+    --tamanioCardMitad: 137.5px;
 }
 
 
@@ -139,7 +141,7 @@ body {
     gap: 0.8vw;
     justify-content: end;
     align-items: center;
-    width: 20%;
+    width: auto;
     /* border: solid; */
 }
 .header__user-money{
@@ -157,6 +159,7 @@ body {
     width: 50px;
     fill: var(--secundario);
 }
+
 .header__svg:hover{
     fill: var(--principal);
     scale: 1.2;
@@ -333,12 +336,13 @@ body {
 
 .main__games{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     gap: 3vh;
-    width: 90%;
+    width: calc(100% - 0.8vw);
     /* border: solid; */
     margin: 0 auto;
     margin-top: 2vh;
+    
 }
 .main__game, .main__game-nohover{
     width: 275px;

@@ -139,7 +139,7 @@ body {
     gap: 0.8vw;
     justify-content: end;
     align-items: center;
-    width: 20%;
+    width: auto;
     /* border: solid; */
 }
 .header__user-money{
