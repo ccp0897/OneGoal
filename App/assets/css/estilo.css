@@ -510,6 +510,9 @@ body {
 }
 
 @media(max-width:801px){
+    .header__logo{
+        width: 30%;
+    }
     .header__nav, .buttons{
         display: none;
     }
@@ -557,6 +560,7 @@ body {
         border-radius: 100px;
         padding: 1vh 1vw;
         margin-left: 20vw;
+        z-index: 3;
     }
     .menu__movil a{
         width: 8vw;
@@ -581,5 +585,45 @@ body {
     }
     .marcado{
         background-color: var(--principal);
+    }
+}
+
+@media(max-width:500px){
+   
+    .main__portada{
+        flex-direction: column;
+        justify-content: end;
+        gap: 20vh;
+
+        
+    }
+    .main__portada-button{
+        width: 80%;
+        height: auto;
+        /* border: solid; */
+    }
+
+    .main__portada-titulo{
+        width: 100%;
+        font-size: 1em;
+        /* border: solid; */
+    }
+    .main__portada-button a{
+        font-size: 1em;
+    }
+    .main__marca{
+        font-size: 1.4rem;
+    }
+    .main__aboutUs-titulo{
+        font-size: 1em;
+        width: 100%;
+    }
+    .container__box h3{
+        font-size: 1.4em;
+    }
+    
+    .container__box p{
+        font-size: 1em;
+
     }
 }

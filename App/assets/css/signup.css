@@ -710,3 +710,13 @@ body {
      
   }
   }
+
+  @media(max-width:500px){
+    .signup__form-login{
+      color: var(--blanco);
+      font-size: 0.6rem;
+  }
+  .signup__form-terms label{
+    font-size: 0.6rem;
+  }
+  }

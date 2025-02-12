@@ -680,7 +680,7 @@ body {
     opacity: 0.3;
     pointer-events: none;
 }
-/** FOOTER */
+/*FOOTER*/
 
 .footer{
     background-color: var(--secundario);
@@ -709,6 +709,7 @@ body {
 }
 .footer__info-logo img{
     margin-bottom: 2vh;
+    width: 90%;
 }
 
 .footer__info-contact{
@@ -720,7 +721,7 @@ body {
 
 }
 .footer__info-contact div{
-    width: 40%;
+    width: auto;
     display: flex;
     /* border: solid white; */
     gap: 0.5vw;

@@ -99,46 +99,11 @@ body {
     font-family: SinkinSansBold;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
-}
-
-.buttons a {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 45%;
-    text-align: center;
-    
-}
-
-.button__login {
-    background-color: var(--principal);
-    border: 2px solid var(--principal);
-    color: var(--secundario);
-    font-weight: bold;
-}
-
-.button__singup {
-    border: 2px solid var(--principal);
-    color: var(--principal);
-    background-color: transparent;
-}
-.button__login:hover {
-    background-color: var(--secundario);
-    color: var(--principal);
-}   
-.button__singup:hover {
-    background-color: var(--principal);
-    color: var(--secundario);
-}
 
 /* YA INICIADO SESION */
+.oculto{
+    display: none;
+}
 .header__user{
     display: flex;
     gap: 0.8vw;
@@ -146,6 +111,11 @@ body {
     align-items: center;
     width: auto;
     /* border: solid; */
+}
+.header__user a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header__user-money{
     display: flex;
@@ -415,6 +385,7 @@ body {
 }
 .footer__info-logo img{
     margin-bottom: 2vh;
+    width: 90%;
 }
 
 .footer__info-contact{
@@ -426,7 +397,7 @@ body {
 
 }
 .footer__info-contact div{
-    width: 40%;
+    width: auto;
     display: flex;
     /* border: solid white; */
     gap: 0.5vw;
@@ -457,3 +428,175 @@ body {
     text-align: right;
     
 }
+
+@media(max-width: 1366px){
+    .header__svg{
+        height: 46px;
+        width: 46px;
+    }
+}
+
+@media(max-width: 1312px){
+    
+}
+
+@media(max-width: 1209px){
+    .header__svg{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media(max-width: 1150px){
+    .main__friends h2, .main__global h2{
+        font-size: 1.6em;    
+    }
+    .ranking__info p, .ranking__info2 p{
+        font-size: 1.2em;
+    
+    }
+    .ranking__points p{
+        font-size: 1.2em;
+    }
+    .corona{
+        width: 40px;
+        height: 40px;
+    }
+    .info__img{
+        width: 40px;
+        height: 40px;
+    }
+    .main__info p{
+        font-size: 1.6em;
+    }
+}
+
+@media(max-width: 968px){
+    .header__svg{
+        height: 32px;
+        width: 32px;
+    }
+    .main__friends h2, .main__global h2{
+        font-size: 1.4em;    
+    }
+    .ranking__info p, .ranking__info2 p{
+        font-size: 1em;
+    
+    }
+    .ranking__points p{
+        font-size: 1em;
+    }
+    .corona{
+        width: 32px;
+        height: 32px;
+    }
+    .info__img{
+        width: 32px;
+        height: 32px;
+    }
+    .main__info p{
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width:801px){
+    .header__logo{
+        width: 30%;
+    }
+    .header__nav{
+        display: none;
+    }
+    .oculto{
+        display: block;
+    }
+    .box_titulo{
+        height: 6vh;
+    }
+
+    .main{
+        padding-bottom: 20vh;
+    }
+    .footer{
+        display: none;
+    }
+    .menu__movil{
+        position: fixed;
+        bottom: 10vh;
+        background-color: black;
+        width: 60vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 100px;
+        padding: 1vh 1vw;
+        margin-left: 20vw;
+        z-index: 3;
+    }
+    .menu__movil a{
+        width: 8vw;
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: solid white; */
+        border-radius: 50%;
+    }
+    .menu__movil a:hover{
+        background-color: var(--principal);
+    }
+    .menu__movil a > svg{
+        width: 5vw;
+        height: 5vw;
+        fill: white;
+    }
+    .header__svg{
+        height: 24px;
+        width: 24px;
+    }
+    .marcado{
+        background-color: var(--principal);
+    }
+    .main__friends, .main__global{
+        padding: 0.6rem;
+    }
+    .rankingsContainer{
+        padding: 0.6rem;
+    }
+    .main__friends h2, .main__global h2{
+        font-size: 1.4em;    
+    }
+    .ranking__info p, .ranking__info2 p{
+        font-size: 1em;
+    
+    }
+    .ranking__points p{
+        font-size: 1em;
+    }
+    .main__info p{
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width:500px){
+    .rankingsContainer{
+        padding: 0.2rem;
+    }
+    .main__friends h2, .main__global h2{
+        font-size: 1.2em;    
+    }
+    .ranking__info p, .ranking__info2 p{
+        font-size: 0.8em;
+    
+    }
+    .ranking__points p{
+        font-size: 0.8em;
+    }
+    .main__info p{
+        font-size: 1.2em;
+    }
+    .box_titulo{
+        height: 4vh;
+    }
+}
+
+
