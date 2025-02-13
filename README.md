@@ -49,8 +49,9 @@ Para la implementación del sistema de diseño se han empleado las tecnologías 
 - Se ha empleado flex y grid para la colocación de los elementos.
 - Se ha usado la metodología BEM para nombra las clases dentro del código HTML.
 - Se han usado media querys para tratar de hacer la página responsive para los endpoints: 400px (móvil) y 1100px (tablet).
+## 3. Funcionamiento básico de la aplicación
 
-## 3. Futuros trabajos
+## 4. Futuros trabajos
 - Agregar funcionalidad con JavaScript u otra tecnología.
 - Funcionalidad de chats entre diferentes usuarios.
 - Creación de chats cuando se crea una apuesta.
