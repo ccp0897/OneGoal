@@ -96,46 +96,11 @@ body {
 }
 
 
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
-}
-
-.buttons a {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 45%;
-    text-align: center;
-    
-}
-
-.button__login {
-    background-color: var(--principal);
-    border: 2px solid var(--principal);
-    color: var(--secundario);
-    font-weight: bold;
-}
-
-.button__singup {
-    border: 2px solid var(--principal);
-    color: var(--principal);
-    background-color: transparent;
-}
-.button__login:hover {
-    background-color: var(--secundario);
-    color: var(--principal);
-}   
-.button__singup:hover {
-    background-color: var(--principal);
-    color: var(--secundario);
-}
 
 /* YA INICIADO SESION */
+.oculto{
+    display: none;
+}
 .header__user{
     display: flex;
     gap: 0.8vw;
@@ -143,6 +108,11 @@ body {
     align-items: center;
     width: auto;
     /* border: solid; */
+}
+.header__user a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header__user-money{
     display: flex;
@@ -751,4 +721,136 @@ body {
     /* border: solid var(--blanco); */
     text-align: right;
     
+}
+
+@media(max-width:1366px){
+    .oculto2{
+        display: none;
+    }
+    .main__popUp{
+        width: 50vw;
+
+    }
+}
+@media(max-width:1312px){
+    .slider-item img {
+        width: 70px;
+        height: 70px;
+    }
+}
+@media(max-width:1209px){
+    .header__svg{
+        height: 40px;
+        width: 40px;
+    }
+}
+@media(max-width:1150px){
+    .main__popUp{
+        width: 60vw;
+
+    }
+}
+@media(max-width:968px){
+    .slider-item img {
+        width: 55px;
+        height: 55px;
+    }
+    .oculto2{
+        display: none;
+    }
+    .main__popUp{
+        width: 64vw;
+
+    }
+}
+@media(max-width:801px){
+    .marcado{
+        background-color: var(--principal);
+    }
+    .slider-item img {
+        width: 48px;
+        height: 48px;
+    }
+    .header__logo{
+        width: 30%;
+    }
+    .header__nav{
+        display: none;
+    }
+    .oculto{
+        display: block;
+    }
+
+    .main{
+        padding-bottom: 20vh;
+    }
+    .footer{
+        display: none;
+    }
+    .menu__movil{
+        position: fixed;
+        bottom: 10vh;
+        background-color: black;
+        width: 60vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 100px;
+        padding: 1vh 1vw;
+        margin-left: 20vw;
+        z-index: 3;
+    }
+    .menu__movil a{
+        width: 8vw;
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: solid white; */
+        border-radius: 50%;
+    }
+    .menu__movil a:hover{
+        background-color: var(--principal);
+    }
+    .menu__movil a > svg{
+        width: 5vw;
+        height: 5vw;
+        fill: white;
+    }
+    .header__svg{
+        height: 24px;
+        width: 24px;
+    }
+    .main__popUp{
+        width: 72vw;
+
+    }
+    
+}
+@media(max-width:600px){
+    .main__popUp{
+        width: 90vw;
+
+    }
+}
+@media(max-width:500px){
+    .main__leagues-select{
+        justify-content: space-between;
+        gap: 8px;
+    }
+    .main__games{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .oculto2{
+        display: none;
+    }
+    .main__popUp{
+        width: 100vw;
+
+    }
+    #betName{
+        width: 99.9%;
+    }
 }
