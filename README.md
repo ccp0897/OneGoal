@@ -62,3 +62,5 @@ Para la implementación del sistema de diseño se han empleado las tecnologías 
 - Agregar saldo.
 - Generar notificaciones (mensajes en los chats, creación de apuestas, invitación de amigos, nuevas solicitudes de amistad).
 - Buscador de usuarios.
+## 5. Licencia
+Este proyecto está bajo la licencia Creative Commons BY (CC BY). Esta es una licencia de Creative Commons que permite a otros distribuir, remezclar, adaptar y construir sobre tu obra, incluso con fines comerciales, siempre que te den crédito por la creación original.
