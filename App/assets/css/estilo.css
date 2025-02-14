@@ -441,7 +441,7 @@ body {
         width: 80%;
     }
     .box_titulo{
-        height: 12vh;
+        height: 100%;
     }
     .main__portada-button a{
         width: 100%;
@@ -481,7 +481,7 @@ body {
         font-size: 0.6rem;
     }
     .box_titulo{
-        height: 8vh;
+        height: 100%;
     }
     .main__marca{
         font-size: 2.4rem;
@@ -503,7 +503,7 @@ body {
         font-size: 1.8em;
     }
     .box_titulo{
-        height: 14vh;
+        height: 100%;
     }
     .header__svg{
         height: 32px;
@@ -542,7 +542,7 @@ body {
         width: 90%;
     }
     .box_titulo{
-        height: 8vh;
+        height: 100%;
     }
 
     .main{

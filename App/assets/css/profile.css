@@ -601,7 +601,7 @@ body {
         display: block;
     }
     .box_titulo{
-        height: 6vh;
+        height: 100%;
     }
 
     .main{
