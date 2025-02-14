@@ -24,6 +24,7 @@
     list-style: none;
 }
 
+/* VARIBLES USADAS */
 :root{
     --principal: #A7F407;
     --secundario: #000000;
@@ -52,7 +53,7 @@ body {
     padding: 1rem 2rem;
 
 }
-
+/* HEADER LOGO */
 .header__logo{
     width: 20%;
 }
@@ -87,6 +88,7 @@ body {
     height: 0.5vh;
     background-color: var(--principal);
 }
+/* INICIO DE SESION Y REGISTRO */
 .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -127,7 +129,7 @@ body {
     color: var(--secundario);
 }
 
-.oculto{
+.oculto{ /* OCULTAR ELEMENTOS DE LA BARRA DE NAVEGACION */
     display: none;
 }
 /* YA INICIADO SESION */
@@ -321,7 +323,7 @@ body {
     height: 100%;
 }
 
-/* GRID */
+/* GRID (ABOUT US)*/
 
 .main__aboutUs-container{
     width: 100%;
@@ -432,7 +434,7 @@ body {
     
 }
 
-/*  MEDIA QUERY */
+/*  MEDIA QUERY PAGINA*/
 
 @media(max-width: 1366px){
     .main__portada-titulo{
@@ -549,6 +551,7 @@ body {
     .footer{
         display: none;
     }
+    /* APARICION DEL MENÚN DEL MOVIL */
     .menu__movil{
         position: fixed;
         bottom: 10vh;

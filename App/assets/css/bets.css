@@ -25,6 +25,7 @@
     list-style: none;
 }
 
+/* VARIABLES USADAS */
 :root{
     --principal: rgb(167, 244, 7);
     --secundario: #000000;
@@ -60,6 +61,7 @@ body {
 
 }
 
+/* HEADER LOGO */
 .header__logo{
     width: 20%;
 }
@@ -98,7 +100,7 @@ body {
 
 
 /* YA INICIADO SESION */
-.oculto{
+.oculto{ /* OCULTAR NAVEGACION*/
     display: none;
 }
 .header__user{
@@ -638,7 +640,7 @@ body {
     cursor: pointer;
 }
 
-.overlay {
+.overlay { /* TAPAR FONDO PARA QUE NO SE PUEDA INTERACTUAR CON ELLO */
     position: fixed;
     top: 0;
     left: 0;
@@ -729,6 +731,8 @@ body {
     
 }
 
+/* MEDIA QUERY PAGINA */
+
 @media(max-width:1366px){
     .oculto2{
         display: none;
@@ -793,6 +797,7 @@ body {
     .footer{
         display: none;
     }
+    /* APARICION DEL MENÚN DEL MOVIL */
     .menu__movil{
         position: fixed;
         bottom: 10vh;

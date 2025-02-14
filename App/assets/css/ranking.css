@@ -25,6 +25,7 @@
     list-style: none;
 }
 
+/* VARIABLES DE USO */
 :root{
     --principal: rgb(167, 244, 7);
     --secundario: #000000;
@@ -47,7 +48,7 @@ body {
     margin: 0  auto;
 }
 
-/*Header*/
+/* Header */
 .header{
     color: var(--secundario);
     display: flex;
@@ -58,6 +59,7 @@ body {
 
 }
 
+/* HEADER LOGO*/
 .header__logo{
     width: 20%;
 }
@@ -92,18 +94,19 @@ body {
     height: 0.5vh;
     background-color: var(--principal);
 }
-.marcado{
+.marcado{ /* ELEMENTO USADO PARA MANTENER MARCADO LA PAGINA EN LA QUE SE ENCUENTRA*/
     text-decoration: none;
     color: var(--principal);
     font-size: 1.5em;
     font-family: SinkinSansBold;
 }
 
-
-/* YA INICIADO SESION */
-.oculto{
+.oculto{ /* ELEMENTO PARA OCULTAR LA NAVEGACION CUANDO SE LLEGA A TAMANIO DE MOVIL */
     display: none;
 }
+
+/* YA INICIADO SESION */
+
 .header__user{
     display: flex;
     gap: 0.8vw;
@@ -146,6 +149,7 @@ body {
     fill: var(--secundario);
     scale: 1.2;
 }
+/* LINEA DE DEGRADADO ENTRE HEADER Y MAIN */
 .separador{
     width: 100%;
     height: 2vh;
@@ -429,6 +433,7 @@ body {
     
 }
 
+/* MEDIA QUERY PAGINA */
 @media(max-width: 1366px){
     .header__svg{
         height: 46px;
@@ -519,6 +524,7 @@ body {
     .footer{
         display: none;
     }
+    /* APARICION DEL MENÚN DEL MOVIL */
     .menu__movil{
         position: fixed;
         bottom: 10vh;

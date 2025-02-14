@@ -13,6 +13,7 @@
     src: url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
 }
 
+/* ESTILO GENERAL DE LA PAGINA */
 *{
     margin: 0;
     padding: 0;
@@ -25,6 +26,7 @@
     list-style: none;
 }
 
+/* VARIABLES UTILIZADAS */
 :root{
     --principal: #a7f407;
     --secundario: #000000;
@@ -51,7 +53,7 @@ body {
     align-items: center;
 }
 
-/* MAIN */
+/* MAIN REGISTRO*/
 
 .signup {
     position: absolute;
@@ -164,7 +166,7 @@ body {
     transition: color 0.3s;
 }
 
-/*ANIMACION*/
+/* ANIMACION DE FONDO DE BURBUJAS*/
 .bubbles {
     position: relative;
     width: 100%;
@@ -675,6 +677,7 @@ body {
     }
   }
 
+  /* MEDIA QUERY PARA RESPONSIVE */
   @media(max-width:1366px){
     .signup {
       width: 50vw;

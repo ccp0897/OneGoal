@@ -25,6 +25,7 @@
     list-style: none;
 }
 
+/* VARIABLES USADAS EN LA PAGINA */
 :root{
     --principal: rgb(167, 244, 7);
     --secundario: #000000;
@@ -58,6 +59,7 @@ body {
 
 }
 
+/* HEADER LOGO */
 .header__logo{
     width: 20%;
 }
@@ -95,7 +97,7 @@ body {
 
 
 /* YA INICIADO SESION */
-.oculto{
+.oculto{ /* CLASE PARA OCULTAR LA NAVEGACION CUANDO SE LLEGA A TAMANIO DE MOVIL */
     display: none;
 }
 .header__user{
@@ -147,7 +149,7 @@ body {
     width: 100%;
     background: linear-gradient(180deg, var(--principal) 10%, var(--blanco) 100%);
 }
-.marcado{
+.marcado{ /* CLASE PARA MARCAR EL LUGAR DONDE SE ENCUENTRA EN ESTE CASO EL ICONO DE USUARIO*/
     fill: var(--principal);
     height: 50px;
     width: 50px;
@@ -169,6 +171,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* BANNER (DIV CON UN BACKGROUND) */ 
 .main__header{
     width: 90%;
     /* border: solid; */
@@ -179,6 +182,7 @@ body {
     height: 40vh;
 }
 
+/* INFORMACION DE USUARIO */
 .main__data{
     width: 80%;
     display: flex;
@@ -245,6 +249,7 @@ body {
     scale: 1.2;
 }
 
+/* BOTON DE EDITAR INFORMACION */
 .main__data-edit{
     /* border: solid; */
     width: 20%;
@@ -399,7 +404,7 @@ body {
     /* border: solid; */
 }
 
-
+/* Resultados de las apuestas*/
 .result{
     text-align: center;
 }
@@ -416,6 +421,7 @@ body {
     color: var(--secundario);
 }
 
+/* Equipos de las apuestas */
 .game__teams-name{
     display: flex;
     justify-content: space-between;
@@ -545,6 +551,8 @@ body {
     
 }
 
+/* MEDIA QUERYS PAGINA*/
+
 @media(max-width: 1366px){
     .header__svg{
         height: 46px;
@@ -602,6 +610,7 @@ body {
     .footer{
         display: none;
     }
+    /* APARICION DEL MENÚN DEL MOVIL */
     .menu__movil{
         position: fixed;
         bottom: 10vh;

@@ -13,6 +13,7 @@
     src: url("../fonts/SinkinSans-700Bold.otf"), url("../fonts/SinkinSans-700BoldItalic.otf");
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -25,6 +26,7 @@
     list-style: none;
 }
 
+/*VARIABLES USADAS*/
 :root{
     --principal: rgb(167, 244, 7);
     --secundario: #000000;
@@ -58,6 +60,7 @@ body {
 
 }
 
+/* HEADER LOGO */
 .header__logo{
     width: 20%;
 }
@@ -92,7 +95,7 @@ body {
     height: 0.5vh;
     background-color: var(--principal);
 }
-.marcado{
+.marcado{ /* MANTENER MARCADA LA PAGINA EN LA QUE SE ENCUENTRA*/
     text-decoration: none;
     color: var(--principal);
     font-size: 1.5em;
@@ -100,7 +103,7 @@ body {
 }
 
 
-.oculto{
+.oculto{ /* OCULTAR NAVEGACION */
     display: none;
 }
 /* YA INICIADO SESION */
@@ -383,6 +386,7 @@ body {
     
 }
 
+/* MEDIA QUERY PAGINA */
 @media(max-width: 1366px){
     .header__svg{
         height: 46px;
@@ -435,6 +439,7 @@ body {
     .footer{
         display: none;
     }
+    /* APARICION DEL MENÚN DEL MOVIL */
     .menu__movil{
         position: fixed;
         bottom: 10vh;
