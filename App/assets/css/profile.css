@@ -662,7 +662,14 @@ body {
         font-size: 1em;
     }
 }
-
+@media(max-width:651px){
+    .main__history-games{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: solid; */
+    }
+}
 @media(max-width:500px){
     .main__header{
         background-image: url("../img/banner2.jpg");
@@ -693,12 +700,7 @@ body {
     .main__userInfo{
         flex-direction: column;
     }
-    .main__history-games{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* border: solid; */
-    }
+    
 
     .oculto2{
         display: none;
