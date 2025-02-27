@@ -99,4 +99,5 @@ Este proyecto está bajo la licencia Creative Commons BY (CC BY). Esta es una li
 2. Efecto hover en tarjetas de apuestas
 3. Animación que simulan balones en la página de registro
 4. Rotación de iconos (logos de redes sociales y logos como notificación y perfil) al pasar sobre ellos.
+5. Animación de fade-in
 
