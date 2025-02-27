@@ -92,3 +92,11 @@ Durante el desarrollo de la página se han usado diferentes tecnologías:
 
 ## 6. Licencia
 Este proyecto está bajo la licencia Creative Commons BY (CC BY). Esta es una licencia de Creative Commons que permite a otros distribuir, remezclar, adaptar y construir sobre tu obra, incluso con fines comerciales, siempre que te den crédito por la creación original.
+
+## 7. Animaciones
+
+1. Transición en botones
+2. Efecto hover en tarjetas de apuestas
+3. Animación que simulan balones en la página de registro
+4. Rotación de iconos (logos de redes sociales y logos como notificación y perfil) al pasar sobre ellos.
+

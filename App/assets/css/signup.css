@@ -141,6 +141,7 @@ body {
     padding: 0.5rem;
     letter-spacing: 2px;
     /* border: solid white; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
    
 }
 
@@ -153,6 +154,7 @@ body {
     background-color: var(--secundario);
     color: var(--principal);
     border: solid var(--principal);
+    transition: background-color 0.3s, color 0.3s;
 }
 .signup__form-login{
     color: var(--blanco);

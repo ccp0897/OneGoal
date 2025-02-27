@@ -135,20 +135,26 @@ body {
     height: 50px;
     width: 50px;
     fill: var(--secundario);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .header__svg:hover{
     fill: var(--principal);
     scale: 1.2;
+    transition: background-color 0.3s ease;
+    transform: rotate(15deg);
 }
 .header__svg2{
     height: 24px;
     width: 24px;
     fill: var(--principal);
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .header__svg2:hover{
     fill: var(--secundario);
     scale: 1.2;
+    transition: background-color 0.3s ease;
+    transform: rotate(15deg);
 }
 .separador{
     width: 100%;
@@ -376,6 +382,7 @@ body {
 .follow_icons .footer__svg:hover{
     fill: var(--principal);
     scale: 1.2;
+    transform: rotate(15deg);
 }
 
 .footer__copy{
@@ -464,6 +471,7 @@ body {
     }
     .menu__movil a:hover{
         background-color: var(--principal);
+        transform: rotate(15deg);
     }
     .menu__movil a > svg{
         width: 5vw;
