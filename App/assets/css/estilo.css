@@ -43,6 +43,23 @@ body {
     margin: 0  auto;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 /*Header*/
 .header{
     color: var(--secundario);
@@ -94,7 +111,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 20%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 
 .buttons a {
     padding: 0.5rem 1rem;
@@ -105,6 +124,7 @@ body {
     width: 45%;
     text-align: center;
     font-family: SinkinSansBold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     
 }
 
@@ -123,10 +143,12 @@ body {
 .button__login:hover {
     background-color: var(--secundario);
     color: var(--principal);
+    transition: background-color 0.3s, color 0.3s;
 }   
 .button__singup:hover {
     background-color: var(--principal);
     color: var(--secundario);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .oculto{ /* OCULTAR ELEMENTOS DE LA BARRA DE NAVEGACION */
@@ -164,6 +186,8 @@ body {
 .header__svg:hover{
     fill: var(--principal);
     scale: 1.2;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: rotate(15deg);
 }
 .header__svg2{
     height: 24px;
@@ -174,6 +198,8 @@ body {
 .header__svg2:hover{
     fill: var(--secundario);
     scale: 1.2;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: rotate(15deg);
 }
 .separador{
     width: 100%;
@@ -246,6 +272,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: end;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
 }
 
 .main__portada-button a{
@@ -263,6 +291,7 @@ body {
 .main__portada-button a:hover{
     background-color: var(--secundario);
     color: var(--principal);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* MARCA/INFORMACION */
@@ -415,7 +444,9 @@ body {
     align-items: center;
     /* border: solid white; */
 }
-
+.follow_icons{
+    display: flex;
+}
 .footer__svg{
     height: 24px;
     width: 24px;
@@ -424,6 +455,7 @@ body {
 .follow_icons .footer__svg:hover{
     fill: var(--principal);
     scale: 1.2;
+    transform: rotate(15deg);
 }
 
 .footer__copy{
@@ -576,6 +608,7 @@ body {
     }
     .menu__movil a:hover{
         background-color: var(--principal);
+        transform: rotate(15deg);
     }
     .menu__movil a > svg{
         width: 5vw;

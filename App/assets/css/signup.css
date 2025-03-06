@@ -65,7 +65,7 @@ body {
     justify-content: center;
     height: auto;
     width: 40vw;
-    margin-top: 12vh;
+    margin-top: 4vh;
     box-shadow: 0 4px 4px var(--gris);
     background-color: var(--secundario);
     border-radius: 8px;
@@ -100,6 +100,7 @@ body {
     border-radius: 12px;
     border: solid var(--principal);
     background-color: var(--blanco);
+    transition: border 0.3s;
 }
 
 .signup__form-terms{
@@ -141,17 +142,20 @@ body {
     padding: 0.5rem;
     letter-spacing: 2px;
     /* border: solid white; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
    
 }
 
 .signup__form-button a:hover{
     color: var(--principal);
+    
 }
 
 .signup__form-button:hover{
     background-color: var(--secundario);
     color: var(--principal);
     border: solid var(--principal);
+    transition: background-color 0.3s, color 0.3s;
 }
 .signup__form-login{
     color: var(--blanco);
@@ -165,12 +169,23 @@ body {
     text-decoration: underline;
     transition: color 0.3s;
 }
+/* ANIMACION DE SHAKE PARA ERRORES DE FORMULARIO */
+.error {
+  border-color: red;
+  animation: shake 0.3s ease-in-out 3;
+}
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
 /* ANIMACION DE FONDO DE BURBUJAS*/
 .bubbles {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     overflow: hidden;
   }
   

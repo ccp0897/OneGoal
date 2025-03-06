@@ -7,6 +7,8 @@
   - [4. Tecnología utilizada](#4-Tecnología-utilizada)
   - [5. Futuros trabajos](#5-Futuros-trabajos)
   - [6. Licencia](#6-Licencia)
+  - [7. Animaciones](#7-Animaciones)
+  - [8. Asistente de IA](#8-Asistente-de-IA)
 
   
 
@@ -92,3 +94,25 @@ Durante el desarrollo de la página se han usado diferentes tecnologías:
 
 ## 6. Licencia
 Este proyecto está bajo la licencia Creative Commons BY (CC BY). Esta es una licencia de Creative Commons que permite a otros distribuir, remezclar, adaptar y construir sobre tu obra, incluso con fines comerciales, siempre que te den crédito por la creación original.
+
+## 7. Animaciones
+
+1. Transición en botones
+2. Efecto hover en tarjetas de apuestas
+3. Animación que simulan balones en la página de registro
+4. Rotación de iconos (logos de redes sociales y logos como notificación y perfil) al pasar sobre ellos.
+5. Animación de fade-in
+6. Cambio de opacidad en fondos al seleccionar el botón de crear apuesta (create bet), el fondo se vuelve opaco y no se puede interactuar con los elementos del fondo
+7. "Shake" de errores en el formulario de signup, todos los campos son obligatorios escribir algo, si se queda algun campo sin completar se hace un "shake" y se ponen los campos que no se han completado en rojo.
+
+## 8. Asistente de IA
+
+Para la creación del pop up que simula el diseño de un chat para asistencia he seguido los siguientes pasos:
+1. Creación del icono que aparecera en todas las páginas por medio de canvas y la tecnología de Three.js (libreria de JavaScript para crear contenido 3D). He creado una esfera con movimiento para simular un balón. Para ello he usado javascrip que despues se importa para que el canvas pueda ser usado como boton para el pop up.
+2. Creación del pop up, que se muestre cuando se pulse en la esfera y desaparezca cuando se pulse en la "x" de salida u otra vez en la esfera.
+3. El pop up está pensado para que puedas iniciar una conversación con el chat, que puedas hacer una pregunta ya predefinida (está saldría en función de las preguntas que le hayas hecho con anterioridad a la IA) y un botón que te hace un resumen de lo que has preguntado hasta el momento.
+4. Dentro de este pop up, aparece otra esfera en movimiento que se ha hecho de la misma forma que el botón canvas, pero esta vez sin el contorno que simule un balón.
+5. Para todo el diseño CSS del asistente de IA se ha usado tailwind4.
+
+Como aclaración el botón de asistente de IA solo aparecerá una vez ya estes loggeado por lo que en la página principal (index.html) no aparecerá sino que se tiene que hacer el registro primero y una vez ya se esté en la página que simula que ya has iniciado sesión aparecerá el asistente.
+
