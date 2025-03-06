@@ -7,8 +7,8 @@
   - [4. Tecnología utilizada](#4-Tecnología-utilizada)
   - [5. Futuros trabajos](#5-Futuros-trabajos)
   - [6. Licencia](#6-Licencia)
-  - [7. Licencia](#7-Animaciones)
-  - [8. Asistente de IA](#8-Asistente de IA)
+  - [7. Animaciones](#7-Animaciones)
+  - [8. Asistente de IA](#8-Asistente-de-IA)
 
   
 
