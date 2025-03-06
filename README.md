@@ -1,5 +1,6 @@
 # OneGoal
 - V0 - Sistema de diseño e implementación en HTML y CSS
+- V1 - Animaciones y asistente de chat con Tailwind4
 ## Contenidos
   - [1. Sistema de diseño](#1-Sistema-de-diseño)
   - [2. Implementación HTML y CSS](#2-Implementación-HTML-y-CSS)
