@@ -448,6 +448,9 @@ body {
     width: 24px;
     fill: var(--blanco);
 }
+.follow_icons{
+    display: flex;
+}
 .follow_icons .footer__svg:hover{
     fill: var(--principal);
     scale: 1.2;

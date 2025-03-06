@@ -100,6 +100,7 @@ body {
     border-radius: 12px;
     border: solid var(--principal);
     background-color: var(--blanco);
+    transition: border 0.3s;
 }
 
 .signup__form-terms{
@@ -168,7 +169,18 @@ body {
     text-decoration: underline;
     transition: color 0.3s;
 }
+/* ANIMACION DE SHAKE PARA ERRORES DE FORMULARIO */
+.error {
+  border-color: red;
+  animation: shake 0.3s ease-in-out 3;
+}
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
 /* ANIMACION DE FONDO DE BURBUJAS*/
 .bubbles {
     position: relative;

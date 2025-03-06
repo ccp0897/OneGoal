@@ -429,6 +429,9 @@ body {
     padding: 0 1rem;
     /* border: solid; */
 }
+.game__results-users{
+    display: flex;
+}
 
 .game__results-money p{
     font-size: 1.2em;
@@ -741,7 +744,9 @@ body {
     align-items: center;
     /* border: solid white; */
 }
-
+.follow_icons{
+    display: flex;
+}
 .footer__svg{
     height: 24px;
     width: 24px;
