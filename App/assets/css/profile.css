@@ -30,7 +30,7 @@
     --principal: rgb(167, 244, 7);
     --secundario: #000000;
     --blanco: #FFFFFF;
-    --gris: rgb(144, 142, 142);
+    --gris: #595959;
     --terciario: #7E8B62;
     --rojo: #7E0505;
     --ganador: #147C06;
@@ -225,6 +225,7 @@ body {
     align-items: center;
 }
 .main__data-username h3{
+    display: flex;
     font-size: 2em;
     font-family: var(--bold);
     color: var(--secundario);
@@ -256,6 +257,7 @@ body {
 }
 
 .main__data-money p{
+    display: flex;
     font-size: 1.5em;
     font-family: var(--bold);
     color: var(--secundario);
