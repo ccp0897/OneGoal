@@ -9,6 +9,7 @@
   - [6. Licencia](#6-Licencia)
   - [7. Animaciones](#7-Animaciones)
   - [8. Asistente de IA](#8-Asistente-de-IA)
+  - [9. Accesibilidad](#9-Accesibilidad)
 
   
 
@@ -115,4 +116,6 @@ Para la creación del pop up que simula el diseño de un chat para asistencia he
 5. Para todo el diseño CSS del asistente de IA se ha usado tailwind4.
 
 Como aclaración el botón de asistente de IA solo aparecerá una vez ya estes loggeado por lo que en la página principal (index.html) no aparecerá sino que se tiene que hacer el registro primero y una vez ya se esté en la página que simula que ya has iniciado sesión aparecerá el asistente.
+
+## 9. Accesibilidad
 
