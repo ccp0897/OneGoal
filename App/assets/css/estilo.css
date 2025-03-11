@@ -29,7 +29,7 @@
     --principal: #A7F407;
     --secundario: #000000;
     --blanco: #FFFFFF;
-    --gris: #908E8E;
+    --gris: #777676;
     --terciario: #7E8B62;
     --rojo: #7E0505;
     --ganador: #147C06;
@@ -138,7 +138,7 @@ body {
 .button__singup {
     border: 2px solid var(--principal);
     color: var(--principal);
-    background-color: transparent;
+    background-color: var(--secundario);
 }
 .button__login:hover {
     background-color: var(--secundario);

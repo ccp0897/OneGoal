@@ -1,6 +1,7 @@
 # OneGoal
 - V0 - Sistema de diseño e implementación en HTML y CSS
 - V1 - Animaciones y asistente de chat con Tailwind4
+- V2 - Elementos de accesibilidad para la página
 ## Contenidos
   - [1. Sistema de diseño](#1-Sistema-de-diseño)
   - [2. Implementación HTML y CSS](#2-Implementación-HTML-y-CSS)
@@ -120,3 +121,20 @@ Como aclaración el botón de asistente de IA solo aparecerá una vez ya estes l
 
 ## 9. Accesibilidad
 
+La accesibilidad es uno de los elementos más importantes que hay que tener en cuenta cuando se crean páginas web, ya que tienen que estar pensadas para el uso de todo tipo de usuarios. Para agregar algo de accesibilidad a la página he hecho lo siguiente:
+
+- Incorporar etiquetas semánticas donde sea posible.
+
+- Incorporar textos alternativos en todas las imágenes.
+
+- Incorporar textos emergentes usando la etiqueta "title" en enlaces o elementos que necesiten.
+
+- Hay elementos que ya tienen incorporada la semántica como un botón, que ya tiene texto "Button" o un texto que tiene un enlace y el mismo dice lo que es... en estos casos he agregado la etiqueta arial-label.
+
+Aún asi con todos estos elementos hay páginas en las que no he logrado el 100% de la accesibilidad dada por las herramientas de desarrollo de Google Chrome. Estas páginas han sido:
+
+- La página de apuestas.
+- La página de challenges.
+- La página de rankings.
+
+En estos casos es debido a la falta de contraste en los elementos del header que se quedan marcados para indicar que se encuentra en esa página. Pero he decidido no cambiarlo porque con el documento dado para la realización del proyecto saqué ese tono verde que da como error de contraste y es uno de los colores principales de la página. Además, otro motivo que me ha llevado a no cambiarlo es que el limite de accesibilidad solicitado es de más de 95 y en mi caso si modificar estos pequeños errores de contraste se cumple con los requisitos establecidos.
